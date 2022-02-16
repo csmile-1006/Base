@@ -126,6 +126,11 @@ call pathogen#infect('/root/.vim/bundle/{}')
 call pathogen#helptags()
 
 " -----plug----- "
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+      silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+        autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 call plug#begin('~/.vim/plugged')
 Plug 'Konfekt/FastFold',                { 'tag': '5.0' }
 Plug 'davidhalter/jedi-vim',            { 'commit': '914754a04e0ea0882b3172230199fd771b02dc95' }
