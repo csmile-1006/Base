@@ -132,7 +132,13 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+# alias for tmux
 alias t="tmux"
 alias ta="t a -t"
 alias tls="t ls"
 alias tn="t new -t"
+
+# alias for conda
+alias ca="conda activate"
+alias ci="conda install"
+alias cr="conda remove"
