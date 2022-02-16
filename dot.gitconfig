@@ -11,6 +11,3 @@
   interactive = auto
   ui = true
   pager = true
-[user]
-	name = matthew.g
-	email = matthew.g@kakaocorp.com
