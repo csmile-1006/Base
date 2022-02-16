@@ -1,6 +1,8 @@
 # Resource directory
 res/
 
+# modified file
+*.un~
 ### Python ###
 # Byte-compiled / optimized / DLL files
 __pycache__/
