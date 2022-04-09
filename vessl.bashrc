@@ -118,14 +118,14 @@ fi
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/changyeon/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/vessl/changyeon/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/changyeon/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/changyeon/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "/home/vessl/changyeon/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/vessl/changyeon/anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/changyeon/anaconda3/bin:$PATH"
+        export PATH="/home/vessl/changyeon/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
@@ -144,5 +144,7 @@ alias ci="conda install"
 alias cr="conda remove"
 
 # mujoco configuration
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/vessl/.mujoco/mujoco210/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/root/mujoco210/bin
+#export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libGLEW.so
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/nvidia
+export MUJOCO_PY_MUJOCO_PATH=/root/mujoco210
