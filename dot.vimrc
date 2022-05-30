@@ -1,5 +1,6 @@
 runtime vimrc_example.vim
 let &runtimepath.=',/root/.vim/'
+set backupdir=~/.vim/backups
 set rtp+=~/.fzf
 
 "
