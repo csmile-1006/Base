@@ -144,7 +144,8 @@ alias ci="conda install"
 alias cr="conda remove"
 
 # mujoco configuration
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/root/.mujoco/mujoco210/bin
-#export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libGLEW.so
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/nvidia
 export MUJOCO_PY_MUJOCO_PATH=/root/.mujoco/mujoco210
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/root/.mujoco/mujoco200/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/root/.mujoco/mujoco210/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/nvidia-470
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/nvidia
