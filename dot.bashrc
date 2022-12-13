@@ -145,5 +145,16 @@ alias cr="conda remove"
 
 # mujoco configuration
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/changyeon/.mujoco/mujoco210/bin
-#export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libGLEW.so
+export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libGLEW.so
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/nvidia
+
+# coppeliasim script
+export COPPELIASIM_PREFIX=$HOME
+OS_Version="$(lsb_release -sr | awk -F. '{print $0}')"
+OS_NAME=$( echo ${OS_Version} | tr '.' '_' )
+if [ "$OS_NAME" != '18_04' ] ; then
+    OS_NAME='20_04'
+fi
+export COPPELIASIM_ROOT=$COPPELIASIM_PREFIX/CoppeliaSim_Edu_V4_1_0_Ubuntu$OS_NAME
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$COPPELIASIM_ROOT
+export QT_QPA_PLATFORM_PLUGIN_PATH=$COPPELIASIM_ROOT
